@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket's Details | BugTracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@800&family=Megrim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- ******************** -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/Ticket detail.css">
+  </head>
+  <body>
+    <div class="screen_wrapper">
+      <div class="top_header">
+        <img id="hamburger_menu" class="hamburger_menu" src="pictures and icons/Hamburger Menu.svg" alt="Menu">
+        <div class="logo">BugTracker</div>
+        <div class="header_rightSide">
+          <div class="notification_wrapper">
+            <img src="pictures and icons/Notifications-bar.svg" alt="Notification" class="my_notification">
+            <label class="notification_number">0</label>
+          </div>
+          <div class="notification_box_wrapper">
+            <div class="notification_box">
+            </div>
+          </div>
+          <label class="profile_name"></label>
+          <div class="profile_msg_box">
+            <button class="sign_out_btn">Sign Out</button>
+          </div>
+          <div class="profile_pic_wrapper">
+            <img src="pictures and icons/Profile-pic.svg" alt="Fingerprint" class="profile_pic">
+          </div>
+          <label class="login_status">Logged in as: Admin</label>
+        </div>
+        
+      </div>
+      <div class="wrapper">
+        <div class="left_panel">
+          <img id="close_menu" class="close_menu" src="pictures and icons/Close.svg" alt="Menu">
+          <div class="left_panel_content">
+            <div class="btn-warppers" id="dashboard_btn" tabindex="1">
+              <img class="leftPanel_butns_icon" src="pictures and icons/Dashboard Logo.svg" alt="">
+              <label class="left_panel_butns">Dashboard</label>
+            </div>
+            <div class="btn-warppers" id="projects_btn" tabindex="1">
+              <img class="leftPanel_butns_icon" src="pictures and icons/Projects.svg" alt="">
+              <label class="left_panel_butns" >Projects</label>
+            </div>
+            <div class="btn-warppers" id="tickets_btn" tabindex="1">
+              <img class="leftPanel_butns_icon" src="pictures and icons/Ticket.svg" alt="">
+              <label class="left_panel_butns">Tickets</label>
+            </div>
+            <div class="btn-warppers" id="mng_btn" tabindex="1">
+              <img class="leftPanel_butns_icon" id="mng_role_btn" src="pictures and icons/Manage Role.svg" alt="">
+              <label class="left_panel_butns">Manage Role Assignment</label>
+            </div>
+            <div class="btn-warppers" id="user_btn" tabindex="1" style="display: none;">
+              <img class="leftPanel_butns_icon" src="pictures and icons/User Profile.svg" alt="">
+              <label class="left_panel_butns">User Profile</label>
+            </div>
+          </div>
+          <div class="left_panel_light"></div>
+        </div>
+        <!-- **************** Main Panel ****************** -->
+        <div class="main_panel">
+        <div class="main_panel_back">
+          <div class="main_workspace">
+            <div class="panel_title">TICKET'S DETAILS</div>
+            <!-- **************** Ticket info Tablel ****************** -->
+            <div class="first_half_wrapper">
+              <div class="ticket_table_wrapper">
+                <section class="table_controller_bar">
+                  <label id="ticket_table_title" class="table_title">Ticket info</label>
+                </section>
+                <section class="ticket_table_info">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Ticket #</th>
+                        <th>Ticket Title</th>
+                        <th>Project Name</th>
+                        <th>Description</th>
+                        <th>Ticket Type</th>
+                        <th>Ticket Priority</th>
+                        <th>Ticket Status</th>
+                        <th>Created</th>
+                      </tr>
+                    </thead>
+                    <tbody class="ticket_info_tbody">
+                    </tbody>
+                  </table>
+                </section>
+              </div>
+            </div>
+            <div class="comments_devs_wrapper">
+              <!-- ************* Assigned Devs *************** -->
+              <div class="assigned_devs_wrapper">
+                <label id="assigned_devs_table_title" class="table_title">Ticket's Assigned Developers</label>
+              <section class="assigned_devs_table_content">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Role</th>
+                    </tr>
+                  </thead>
+                  <div>
+                  <tbody class="contributors_tbody">
+                  </tbody>
+                </table>
+              </section>
+              </div>
+              <!-- ************* Commensts' Table ************** -->
+              <div class="comments_big_wrapper">
+                <div class="comments_wrapper">
+                  <section class="table_controller_bar">
+                    <label class="table_title">Comments</label>
+                    <div class="quantity_selector_wrapper">
+                      <label class="show_label">Show</label>
+                      <select class="quantity_selector" size="1">
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04" selected>04</option>
+                      </select>
+                      <label class="per_page">/ Page</label>
+                    </div>               
+                    <input type="text" class="search_bar" placeholder="> Search" maxlength="30">
+                  </section>
+                  <section class="comments_table_content">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Comment #</th>
+                          <th>Created by</th>
+                          <th>Message</th>
+                          <th>Created</th>
+                          <th></th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      </tbody>
+                    </table>
+                    <button class="add_btn" id="new_commnet_btn">+ New Comment</button>
+                    <div class="pagination_bar_wrapper">
+                      <ul class="pagination_bar">
+                        <li class="previous_page"><a href="#" id="previous_page">&#60</a></li>
+                        <li class="page_numbers"><a href="#">01</a></li>
+                        <li class="page_numbers"><a href="#">02</a></li>
+                        <li class="page_numbers"><a href="#">03</a></li>
+                        <li class="next_page"><a href="#" id="next_page">&#62</a></li>
+                      </ul>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+
+            <!-- ************* Edit Comment Window *************** -->
+            <div class="edit_comment_window">
+              <div class="table_window_header">
+                <label>Edit Comment</label>
+                <label class="comment_id_label"></label>
+              </div>
+              <div class="edit-create_window_content">
+                <label class="comment_desc_label" for="edit_comment_desc_textarea">Your Comment*</label>
+                <div class="edit-create_table_line1">
+                  <textarea name="" class="edit-create_comment_desc" id="edit_comment_desc_textarea" cols="30" rows="10" maxlength="84"></textarea>
+                </div>
+                <div class="edit-create_table_line2">
+                  <button class="cancel_btn" id="edit_comment_cancel_btn">Cancel</button>
+                  <button class="save_btn" id="edit_comment_save_btn">Save Changes</button>
+                </div>
+              </div>
+            </div>
+            <!-- ************* Create New Comment Window *************** -->
+            <div class="create_comment_window">
+              <div class="table_window_header">
+                <label>New Comment</label>
+              </div>
+              <div class="edit-create_window_content">
+                <label class="comment_desc_label" for="create_comment_desc_textarea">Your Comment*</label>
+                <div class="edit-create_table_line1">
+                  <textarea name="" class="edit-create_comment_desc" id="create_comment_desc_textarea" cols="30" rows="10" maxlength="84"></textarea>
+                </div>
+                <div class="edit-create_table_line2">
+                  <button class="cancel_btn" id="create_comment_cancel_btn">Cancel</button>
+                  <button class="save_btn" id="create_comment_create_btn">Save Comment</button>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <!-- ************* Big back Blur Window *************** -->
+          <div class="back_blur_window"></div>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="top_left_panels.js"></script>
+    <script src="Ticket detail.js"></script>
+  </body>
+</html>

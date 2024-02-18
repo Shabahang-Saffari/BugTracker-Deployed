@@ -1,0 +1,1014 @@
+:root {
+  --window_inner_width: 1024;
+  --window_inner_height: 1440;
+}
+html{
+  font-size: 16px;
+}
+body{
+  margin: 0px;
+  background-color: rgb(36, 26, 61);
+  /* background-color: rgb(41, 23, 58); */
+}
+/* ************************************************************************************ */
+/* ************************************************************************************ */
+/* ********************************** Cellphone Design ******************************** */
+/* ************************************************************************************ */
+/* ************************************************************************************ */
+@media only screen and (width < 767px) and (orientation: portrait){
+  .background_gradient{
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: var(--window_inner_height);
+    width: var(--window_inner_width);
+    background: radial-gradient(circle at bottom right,rgba(24, 226, 230, 0.82) 4%, rgba(81,219,215,0.48) 23%,
+     rgba(81,219,215,0.2) 34%,rgba(19, 38, 95, 0.25) 43%, rgba(41, 29, 87, 0) 45%),
+
+    radial-gradient(circle at top left,rgba(217,135,255,0.82) 9%, rgba(148,79,180,0.495) 35%,
+      rgba(108,48,135,0.2) 48%, rgba(66, 31, 83, 0.25) 52%, rgba(82,16,112,0) 58%);    
+  }
+  .team_sign_up{
+    display: none;
+  }
+  .wrapper{
+    height: var(--window_inner_height);
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+  }  
+  .logo_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .right_side{
+    text-align: center;
+  }
+  .logo{
+    color: white;
+    font-size: 2rem;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 800;
+    text-decoration: underline;
+    text-underline-offset: 1.0rem;
+    letter-spacing: 0.03rem;
+    text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.789);
+  }
+  @-moz-document url-prefix(){
+    .logo{
+      letter-spacing: -0.06rem;
+    }
+  }
+  .field_container1{
+    margin-top: 1.56rem;
+  }
+  .field_container1, .field_container2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .fname_container, .lname_container, .nickname_container, .phone_container{
+    text-align: left;
+    width: 100%;
+  }
+  .fname_label, .nickname_label, .lname_label, .phone_label, .email_label, .password_label{
+    display: inline-block;
+    color: rgb(225, 225, 225);
+    font-size: 1rem;
+    font-family: Arial, sans-serif; 
+    text-align: left;
+    margin-top: 1.25rem;
+    padding: 0;
+  }
+  .fname_label, .lname_label{
+    margin-left: 2.5rem;
+  }
+  .nickname_label, .phone_label{
+    margin-left: 1.9rem;
+  }
+  
+  .fname_textbox, .nickname_textbox, .lname_textbox, .phone_textbox{
+    margin-top: 0.3125rem;
+    height: 6vh;
+    width: calc(100% - 1.875rem);
+    margin-left: 1.25rem;
+    margin-right: 0.625rem;
+    border-radius: 35px;
+    border: 0px;
+    background-color: #e2eef0;
+    outline: none;
+    box-shadow: inset 0px 2px 10px rgba(0, 0, 0, 0.375);
+    font-size: 1.125rem;
+    font-family: Arial, sans-serif; 
+    color: rgb(96, 96, 96);
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box; 
+  }
+  .nickname_textbox, .phone_textbox{
+    margin-left: 0.625rem;
+    margin-right: 1.25rem;
+  }
+  
+  .email_container, .password_container{
+    text-align: left;
+  }
+  label.error{
+    display: block;
+    color: #e64545;
+    font-size: 1rem;
+    font-family: Arial, sans-serif; 
+    margin-top: 20px;
+    margin-right: 42%;
+  }
+  .email_label, .password_label{
+   margin-left: 2.5rem;
+  }
+  .email_textbox, .password_textbox{
+    display: block;
+    margin-top: 5px;
+    height: 6vh;
+    width: calc(100% - 40px);
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    border-radius: 35px;
+    border: 0px;
+    background-color: #e2eef0;
+    outline: none;
+    box-shadow: inset 0px 2px 10px rgba(0, 0, 0, 0.375);
+    font-size: 1.125rem;
+    font-family: Arial, sans-serif; 
+    color: rgb(96, 96, 96);
+    padding-left: 1.25rem;
+    padding-right: 3.125rem;
+    
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box; 
+  }
+  .password_container{
+    position: relative;
+  }
+  #show_pass, #no_show_pass{
+    position: absolute;
+    top: 64%;
+    left: 85%;
+    color: rgb(125, 126, 126);;
+    font-size: 1.25rem;
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+  #no_show_pass{
+    display: none;
+  }
+ 
+  .fname_textbox::placeholder, .lname_textbox::placeholder, .nickname_textbox::placeholder{
+    font-size: 1.125rem;
+    color: rgb(202, 201, 201);
+    font-style: italic;
+  }
+  .nickname_textbox::placeholder{
+    font-size: 0.875rem;
+  }
+  .phone_textbox::placeholder, .email_textbox::placeholder, .password_textbox::placeholder{
+    font-size: 1.125rem;
+    color: rgb(202, 201, 201);
+  }
+
+  input.error::placeholder{
+    font-size: 0.875rem;
+    color: #e645458a;
+    font-style: normal;
+  }
+  .footnote_container{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  .pass_requirement1, .pass_requirement2{
+    display: block;
+    margin-top: 1.25rem;
+    font-family: Arial, sans-serif;
+    font-size: 0.875rem;
+    color: rgb(202, 201, 201);
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1.562rem;
+    color: rgb(202, 202, 202);
+    font-size: 0.875rem;
+    font-family: Arial, sans-serif;
+  }
+  .pass_requirement2{
+    display:block;
+    margin-top: 0.437rem;
+  }
+  label.error_pass1{
+    display: block;
+    color: #e64545;
+    font-size: 0.875rem;
+    font-family: Arial, sans-serif; 
+    margin-top: 1.25rem;
+    margin-left: 2.5rem;
+  }
+  label.error_pass2{
+    display: block;
+    color: rgb(202, 201, 201);
+    font-size: 0.875rem;
+    font-family: Arial, sans-serif; 
+    margin-top: 0.437rem;
+    margin-left: 2.5rem;
+  }
+  label.approved_pass{
+    display: block;
+    color: #52C8D7;
+    font-size: 0.875rem;
+    font-family: Arial, sans-serif; 
+    margin-top: 1.25rem;
+    margin-left: 2.5rem;
+  }
+  .footnote_signin{
+    font-size: 0.937rem;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 1.875rem;
+    color: rgb(237, 235, 235);
+  }
+  .sign_in_link{
+    display: inline-block;
+    color: rgb(237, 235, 235);
+    font-size: 0.937rem;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    margin-left: 0.312rem;
+    text-decoration: underline 2px rgba(255, 255, 255, 0);;
+    transition: text-decoration-color 0.4s, color 0.4s, text-decoration-underline;
+  }
+  .sign_in_link:hover{
+    color: rgb(243, 243, 243);
+    text-decoration-color: rgba(243, 243, 243, 0.73);
+    cursor: pointer;
+  }
+  .signup_button{
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 1.25rem;
+    height: 6vh;
+    width: 89%;
+    background: linear-gradient(90deg, #722AA9 6.25%, #786FA9 44.92%, #52C8D7 86.23%);
+    border-radius: 35px;
+    border: 0px;
+    transition: box-shadow 0.2s ease-in;
+  }
+  .signup_button:active{
+    opacity: 0.9;
+  }
+  .form_content .footnote{
+    margin-top: 1.562rem;
+    color: rgb(202, 202, 202);
+    font-size: 0.812rem;
+    font-family: Arial, sans-serif;
+    text-align: justify;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 1.562rem;
+    margin-right: 1.562rem;
+  }
+  
+
+
+
+
+}
+/* ************************************************************************************ */
+/* ************************************************************************************ */
+/* ******************************* Cellphone/Landscaoe ******************************** */
+/* ************************************************************************************ */
+/* ************************************************************************************ */
+@media only screen and (width< 900px) and (height< 700px) and (orientation: landscape){
+  
+  .background_gradient{
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    background: radial-gradient(circle at bottom right,rgba(24, 226, 230, 0.82) 4%, rgba(81,219,215,0.48) 23%,
+     rgba(81,219,215,0.2) 34%,rgba(19, 38, 95, 0.25) 43%, rgba(41, 29, 87, 0) 45%),
+
+                      radial-gradient(circle at top left,rgba(217,135,255,0.82) 9%, rgba(148,79,180,0.495) 35%,
+                       rgba(108,48,135,0.2) 48%, rgba(66, 31, 83, 0.25) 52%, rgba(82,16,112,0) 58%);    
+  }
+  .team_sign_up{
+    display: none;
+  }
+  .wrapper{
+    height: 100vh;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+  } 
+  .logo_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .right_side{
+    height: 95%;
+    width: 70vw;
+    text-align: center;
+  }
+  .logo{
+    display: none;
+  }
+  @-moz-document url-prefix(){
+    .logo{
+      letter-spacing: -0.06rem;
+    }
+  }
+  .field_container1, .field_container2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .nickname_container{
+    text-align: left;
+  }
+  .fname_container, .lname_container{
+    margin-right: 9%;
+  }
+  .fname_label, .nickname_label, .lname_label, .phone_label, .email_label, .password_label{
+    display: block;
+    color: rgb(225, 225, 225);
+    font-size: 1rem;
+    font-family: Arial, sans-serif; 
+    margin-top: 0.625rem;
+    text-align: left;
+    margin-left: 10%;
+  }
+  .fname_textbox, .nickname_textbox, .lname_textbox, .phone_textbox{
+    margin-top: 0.312rem;
+    height: 10vh;
+    width: 23vw;
+    border-radius: 35px;
+    border: 0px;
+    background-color: #e2eef0;
+    outline: none;
+    box-shadow: inset 0px 2px 10px rgba(0, 0, 0, 0.375);
+    font-size: 1.125rem;
+    font-family: Arial, sans-serif; 
+    color: rgb(96, 96, 96);
+    padding-left: 1.25rem;
+    padding-right: 0.937rem;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box; 
+  }
+  .field_container3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .email_label, .password_label{
+    margin-left: 4.6%;
+  }
+  
+  .email_textbox, .password_textbox{
+    display: block;
+    margin-top: 0.312rem;
+    height: 10vh;
+    width: 52.5vw;
+    border-radius: 35px;
+    border: 0px;
+    background-color: #e2eef0;
+    outline: none;
+    box-shadow: inset 0px 2px 10px rgba(0, 0, 0, 0.375);
+    font-size: 1.125rem;
+    font-family: Arial, sans-serif; 
+    color: rgb(96, 96, 96);
+    padding-left: 1.25rem;
+    padding-right: 4.062rem;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box; 
+  }
+  .password_container{
+    position: relative;
+  }
+  #show_pass, #no_show_pass{
+    position: absolute;
+    top: 60%;
+    left: 90%;
+    color: rgb(125, 126, 126);;
+    font-size: 1.25rem;
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+  #no_show_pass{
+    display: none;
+  }
+ 
+  .fname_textbox::placeholder, .lname_textbox::placeholder, .nickname_textbox::placeholder{
+    font-size: 1.125rem;
+    color: rgb(202, 201, 201);
+    font-style: italic;
+  }
+  .nickname_textbox::placeholder{
+    font-size: 0.875rem;
+  }
+  .phone_textbox::placeholder, .email_textbox::placeholder, .password_textbox::placeholder{
+    font-size: 1.125rem;
+    color: rgb(202, 201, 201);
+  }
+  .footnote_container{
+    display: none;
+  }
+  .pass_requirement2{
+    display:block;
+    margin-top: 0.437rem;
+  }
+  .footnote_signin{
+    display: none;
+  }
+  
+  .signup_button{
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 1.25rem;
+    height: 10vh;
+    width: 75%;
+    background: linear-gradient(90deg, #722AA9 6.25%, #786FA9 44.92%, #52C8D7 86.23%);
+    border-radius: 35px;
+    border: 0px;
+    transition: box-shadow 0.2s ease-in;
+  }
+  .signup_button:active{
+    opacity: 0.9;
+  }
+  .form_content .footnote{
+    margin-top: 1.562rem;
+    color: rgb(202, 202, 202);
+    font-size: 0.812rem;
+    font-family: Arial, sans-serif;
+    text-align: justify;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 1.562rem;
+    margin-right: 1.562rem;
+  }
+
+}
+/* ************************************************************************************ */
+/* ************************************************************************************ */
+/* ********************************** Tablet Design *********************************** */
+/* ************************************************************************************ */
+/* ************************************************************************************ */
+@media only screen and (730px<width< 1000px) and (height> 700px){
+  .background_gradient{
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background: radial-gradient(circle at bottom right,rgba(24, 226, 230, 0.82) 4%, rgba(81,219,215,0.48) 15%, rgba(81,219,215,0.2) 25%,rgba(19, 38, 95, 0.25) 35%, rgba(41, 29, 87, 0) 36.5%),
+                      radial-gradient(circle at top left,rgba(217,135,255,0.82) 6%, rgba(148,79,180,0.495) 25.5%, rgba(108,48,135,0.2) 35%, rgba(66, 31, 83, 0.25) 39%, rgba(82,16,112,0) 47%);
+  }
+  .team_sign_up{
+    display: none;
+  }
+  .wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+  } 
+  .logo_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo{
+    color: white;
+    font-size: 2.812rem;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    letter-spacing: 0.03rem;
+    text-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+  }
+  @-moz-document url-prefix(){
+    .logo{
+      letter-spacing: -0.06rem;
+    }
+  }
+  .form_content{
+    margin-top: 0.625rem;
+    margin-right: 0;
+    margin-left: 0;
+    height: 34.375rem;
+    width: 28.75rem;
+    border-radius: 15px;
+    background: linear-gradient(180deg, rgba(0, 246, 255, 0.4) 0%, rgba(18, 172, 177, 0.35) 25.15%, rgba(21, 67, 78, 0) 100%);
+  }
+  @-moz-document url-prefix(){
+    .form_content{
+      margin-top: 0.625rem;
+    }
+  }
+  .field_container1, .field_container2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .fname_label, .nickname_label, .lname_label, .phone_label, .email_label, .password_label{
+    display: block;
+    color: rgb(225, 225, 225);
+    font-size: 0.937rem;
+    font-family: Arial, sans-serif; 
+    margin-top: 1.25rem;
+    margin-left: 0.937rem;
+  }
+  .nickname_label, .phone_label{
+    margin-left: 2.625rem;
+  }
+  .email_label, .password_label{
+    margin-left: 2.5rem;
+  }
+  label.error{
+    display: block;
+    color: #e64545;
+    font-size: 0.937rem;
+    font-family: Arial, sans-serif; 
+    margin-top: 1.25rem;
+    margin-left: 2.5rem;
+  }
+  .fname_textbox, .nickname_textbox, .lname_textbox, .phone_textbox{
+    margin-top: 0.312rem;
+    margin-left: 0px;
+    height: 2.25rem;
+    width: 11.875rem;
+    border-radius: 35px;
+    border: 0px;
+    background-color: #e2eef0;
+    outline: none;
+    box-shadow: inset 0px 2px 10px rgba(0, 0, 0, 0.375);
+    font-size: 1.125rem;
+    font-family: Arial, sans-serif; 
+    color: rgb(96, 96, 96);
+    padding-left: 0.937rem;
+    padding-right: 0.937rem;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box; 
+  }
+  .nickname_textbox, .phone_textbox{
+    margin-left: 1.687rem;
+  }
+  .email_textbox, .password_textbox{
+    display: block;
+    margin-top: 0.312rem;
+    margin-left: 1.562rem;
+    height: 2.25rem;
+    width: 25.68rem;
+    border-radius: 35px;
+    border: 0px;
+    background-color: #e2eef0;
+    outline: none;
+    box-shadow: inset 0px 2px 10px rgba(0, 0, 0, 0.375);
+    font-size: 1.125rem;
+    font-family: Arial, sans-serif; 
+    color: rgb(96, 96, 96);
+    padding-left: 0.937rem;
+    padding-right: 3.125rem;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box; 
+  }
+  .password_container{
+    position: relative;
+  }
+  #show_pass, #no_show_pass{
+    position: absolute;
+    top: 30px;
+    left: 400px;
+    color: rgb(125, 126, 126);;
+    font-size: 1.25rem;
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+  #no_show_pass{
+    display: none;
+  }
+  .fname_textbox::placeholder, .lname_textbox::placeholder, .nickname_textbox::placeholder{
+    font-size: 1.125rem;
+    color: rgb(202, 201, 201);
+    font-style: italic;
+  }
+  .nickname_textbox::placeholder{
+    font-size: 1rem;
+  }
+  .phone_textbox::placeholder, .email_textbox::placeholder, .password_textbox::placeholder{
+    font-size: 1.125rem;
+    color: rgb(202, 201, 201);
+  }
+  input.error::placeholder{
+    font-size: 0.875rem;
+    color: #e645458a;
+    font-style: normal;
+  }
+  .pass_requirement1, .pass_requirement2{
+    display: inline-block;
+    margin-top: 1.25rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    font-family: Arial, sans-serif;
+    font-size: 0.875rem;
+    color: rgb(202, 201, 201);
+  }
+  .pass_requirement2{
+    display:block;
+    margin-top: 0.437rem;
+  }
+  label.error_pass1{
+    display: block;
+    color: #e64545;
+    font-size: 0.875rem;
+    font-family: Arial, sans-serif; 
+    margin-top: 1.25rem;
+    margin-left: 2.5rem;
+  }
+  label.error_pass2{
+    display: block;
+    color: rgb(202, 201, 201);
+    font-size: 0.875rem;
+    font-family: Arial, sans-serif; 
+    margin-top: 0.437rem;
+    margin-left: 2.5rem;
+  }
+  label.approved_pass{
+    display: block;
+    color: #52C8D7;
+    font-size: 0.875rem;
+    font-family: Arial, sans-serif; 
+    margin-top: 1.25rem;
+    margin-left: 2.5rem;
+  }
+  .footnote_signin{
+    font-size: 0.937rem;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 1.875rem;
+    color: rgb(202, 201, 201);
+  }
+  .sign_in_link{
+    display: inline-block;
+    color: rgb(202, 201, 201);
+    font-size: 0.937rem;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    margin-left: 0.312rem;
+    text-decoration: underline 2px rgba(255, 255, 255, 0);;
+    transition: text-decoration-color 0.4s, color 0.4s, text-decoration-underline;
+  }
+  .sign_in_link:hover{
+    color: rgb(243, 243, 243);
+    text-decoration-color: rgba(243, 243, 243, 0.73);
+    cursor: pointer;
+  }
+  .signup_button{
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 1.875rem;
+    margin-left: 1.562rem;
+    margin-right: 1.562rem;
+    height: 2.25rem;
+    width: 25.68rem;
+    background: linear-gradient(90deg, #722AA9 6.25%, #786FA9 44.92%, #52C8D7 86.23%);
+    border-radius: 35px;
+    border: 0px;
+    transition: box-shadow 0.2s ease-in;
+  }
+  .signup_button:active{
+    opacity: 0.9;
+  }
+  .form_content .footnote{
+    margin-top: 1.562rem;
+    color: rgb(159, 159, 159);
+    font-size: 0.812rem;
+    font-family: Arial, sans-serif;
+    text-align: justify;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 1.562rem;
+    margin-right: 1.562rem;
+  }
+
+}
+/* ************************************************************************************ */
+/* ************************************************************************************ */
+/* ********************************** Desktop Design ********************************** */
+/* ************************************************************************************ */
+/* ************************************************************************************ */
+@media only screen and (min-width: 900px){
+
+  .background_gradient{
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at left ,rgba(217,135,255,0.82) 6%, rgba(148,79,180,0.495) 33%, rgba(108,48,135,0.2) 50%, rgba(66, 31, 83, 0.25) 55%, rgba(82,16,112,0) 80%);
+  }
+  
+  .designer_tag:hover{
+    box-shadow: 0px 0px 22px #a64dea;
+    cursor: pointer;
+  }
+  .back{
+    height: var(--window_inner_height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: var(--window_inner_height);
+    width: var(--window_inner_width);
+    overflow: hidden;
+  }
+  .right_side{
+    margin-top: 2.812rem;
+    margin-left: 3.812rem;
+    height: 43.75rem;
+  }
+  .logo_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo{
+    color: white;
+    font-size: 2.812rem;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    letter-spacing: 0.03rem;
+    text-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+  @-moz-document url-prefix(){
+    .logo{
+      letter-spacing: -0.06rem;
+    }
+  }
+  .form_content{
+    margin-top: 0.625rem;
+    margin-right: 0;
+    margin-left: 0;
+    height: 34.375rem;
+    width: 28.75rem;
+    border-radius: 15px;
+    background: linear-gradient(180deg, rgba(0, 246, 255, 0.4) 0%, rgba(18, 172, 177, 0.35) 25.15%, rgba(21, 67, 78, 0) 100%);
+  }
+  @-moz-document url-prefix(){
+    .form_content{
+      margin-top: 0.625rem;
+    }
+  }
+  .field_container1, .field_container2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .fname_label, .nickname_label, .lname_label, .phone_label, .email_label, .password_label{
+    display: block;
+    color: rgb(225, 225, 225);
+    font-size: 0.937rem;
+    font-family: Arial, sans-serif; 
+    margin-top: 1.25rem;
+    margin-left: 0.937rem;
+  }
+  .nickname_label, .phone_label{
+    margin-left: 2.625rem;
+  }
+  .email_label, .password_label{
+    margin-left: 2.5rem;
+  }
+  label.error{
+    display: block;
+    color: #e64545;
+    font-size: 0.937rem;
+    font-family: Arial, sans-serif; 
+    margin-top: 1.25rem;
+    margin-left: 2.5rem;
+  }
+ 
+  .fname_textbox, .nickname_textbox, .lname_textbox, .phone_textbox{
+    margin-top: 0.312rem;
+    margin-left: 0px;
+    height: 2.25rem;
+    width: 11.875rem;
+    border-radius: 35px;
+    border: 0px;
+    background-color: #e2eef0;
+    outline: none;
+    box-shadow: inset 0px 2px 10px rgba(0, 0, 0, 0.375);
+    font-size: 1.125rem;
+    font-family: Arial, sans-serif; 
+    color: rgb(96, 96, 96);
+    padding-left: 0.937rem;
+    padding-right: 0.937rem;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box; 
+  }
+  
+  .nickname_textbox, .phone_textbox{
+    margin-left: 1.687rem;
+  }
+  .email_textbox, .password_textbox{
+    display: block;
+    margin-top: 0.312rem;
+    margin-left: 1.562rem;
+    height: 2.25rem;
+    width: 25.68rem;
+    border-radius: 35px;
+    border: 0px;
+    background-color: #e2eef0;
+    outline: none;
+    box-shadow: inset 0px 2px 10px rgba(0, 0, 0, 0.375);
+    font-size: 1.125rem;
+    font-family: Arial, sans-serif; 
+    color: rgb(96, 96, 96);
+    padding-left: 0.937rem;
+    padding-right: 3.125rem;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box; 
+  }
+  .password_container{
+    position: relative;
+  }
+  #show_pass, #no_show_pass{
+    position: absolute;
+    top: 1.875rem;
+    left: 25rem;
+    color: rgb(125, 126, 126);;
+    font-size: 1.25rem;
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+  #no_show_pass{
+    display: none;
+  }
+  .fname_textbox::placeholder, .lname_textbox::placeholder, .nickname_textbox::placeholder{
+    font-size: 1.125rem;
+    color: rgb(202, 201, 201);
+    font-style: italic;
+  }
+  .nickname_textbox::placeholder{
+    font-size: 1rem;
+  }
+  .phone_textbox::placeholder, .email_textbox::placeholder, .password_textbox::placeholder{
+    font-size: 1.125rem;
+    color: rgb(202, 201, 201);
+  }
+  input.error::placeholder{
+    font-size: 0.875rem;
+    color: #e645458a;
+    font-style: normal;
+  }
+  .pass_requirement1, .pass_requirement2{
+    display: inline-block;
+    margin-top: 1.25rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    font-family: Arial, sans-serif;
+    font-size: 0.875rem;
+    color: rgb(202, 201, 201);
+  }
+  .pass_requirement2{
+    display:block;
+    margin-top: 0.437rem;
+  }
+  label.error_pass1{
+    display: block;
+    color: #e64545;
+    font-size: 0.875rem;
+    font-family: Arial, sans-serif; 
+    margin-top: 1.25rem;
+    margin-left: 2.5rem;
+  }
+  label.error_pass2{
+    display: block;
+    color: rgb(202, 201, 201);
+    font-size: 0.875rem;
+    font-family: Arial, sans-serif; 
+    margin-top: 0.437rem;
+    margin-left: 2.5rem;
+  }
+  label.approved_pass{
+    display: block;
+    color: #52C8D7;
+    font-size: 0.875rem;
+    font-family: Arial, sans-serif; 
+    margin-top: 1.25rem;
+    margin-left: 2.5rem;
+  }
+  .footnote_signin{
+    font-size: 0.937rem;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 1.875rem;
+    color: rgb(202, 201, 201);
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+  .sign_in_link{
+    display: inline-block;
+    color: rgb(202, 201, 201);
+    font-size: 0.937rem;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    margin-left: 0.312rem;
+    text-decoration: underline 2px rgba(255, 255, 255, 0);;
+    transition: text-decoration-color 0.4s, color 0.4s, text-decoration-underline;
+  }
+  .sign_in_link:hover{
+    color: rgb(243, 243, 243);
+    text-decoration-color: rgba(243, 243, 243, 0.73);
+    cursor: pointer;
+  }
+  .signup_button{
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 1.875rem;
+    margin-left: 1.562rem;
+    margin-right: 1.562rem;
+    height: 2.25rem;
+    width: 25.687rem;
+    background: linear-gradient(90deg, #722AA9 6.25%, #786FA9 44.92%, #52C8D7 86.23%);
+    border-radius: 35px;
+    border: 0px;
+    transition: box-shadow 0.2s ease-in;
+  }
+  .signup_button:hover{
+    box-shadow: 0px 0px 20px rgba(0, 242, 255, 0.529);
+    cursor: pointer;
+  }
+  .form_content .footnote{
+    margin-top: 1.562rem;
+    color: rgb(159, 159, 159);
+    font-size: 0.812rem;
+    font-family: Arial, sans-serif;
+    text-align: justify;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 1.562rem;
+    margin-right: 1.562rem;
+  }
+  .team_sign_up{
+    height: 38.75rem;
+    margin-right: 6.5rem;
+    margin-top: 6.25rem;
+    overflow: hidden;
+  }
+
+}
+
+

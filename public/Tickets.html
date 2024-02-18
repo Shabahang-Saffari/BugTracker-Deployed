@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets | BugTracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@800&family=Megrim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- ******************** -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/Tickets.css">
+  </head>
+  <body>
+    <div class="screen_wrapper">
+      <div class="top_header">
+        <img id="hamburger_menu" class="hamburger_menu" src="pictures and icons/Hamburger Menu.svg" alt="Menu">
+        <div class="logo">BugTracker</div>
+        <div class="header_rightSide">
+           <div class="notification_wrapper">
+            <img src="pictures and icons/Notifications-bar.svg" alt="Notification" class="my_notification">
+            <label class="notification_number">0</label>
+          </div>
+          <div class="notification_box_wrapper">
+            <div class="notification_box">
+            </div>
+          </div>
+          <label class="profile_name"></label>
+          <div class="profile_msg_box">
+            <button class="sign_out_btn">Sign Out</button>
+          </div>
+          <div class="profile_pic_wrapper">
+            <img src="pictures and icons/Profile-pic.svg" alt="Fingerprint" class="profile_pic">
+          </div>
+          <label class="login_status">Logged in as: Admin</label>
+        </div>
+        
+      </div>
+      <div class="wrapper">
+        <div class="left_panel">
+          <img id="close_menu" class="close_menu" src="pictures and icons/Close.svg" alt="Menu">
+          <div class="left_panel_content">
+            <div class="btn-warppers" id="dashboard_btn" tabindex="1">
+              <img class="leftPanel_butns_icon" src="pictures and icons/Dashboard Logo.svg" alt="">
+              <label class="left_panel_butns">Dashboard</label>
+            </div>
+            <div class="btn-warppers" id="projects_btn" tabindex="1">
+              <img class="leftPanel_butns_icon" src="pictures and icons/Projects.svg" alt="">
+              <label class="left_panel_butns">Projects</label>
+            </div>
+            <div class="btn-warppers" id="tickets_btn" tabindex="1">
+              <img class="leftPanel_butns_icon" src="pictures and icons/Ticket.svg" alt="">
+              <label class="left_panel_butns">Tickets</label>
+            </div>
+            <div class="btn-warppers" id="mng_btn" tabindex="1">
+              <img class="leftPanel_butns_icon" id="mng_role_btn" src="pictures and icons/Manage Role.svg" alt="">
+              <label class="left_panel_butns">Manage Role Assignment</label>
+            </div>
+            <div class="btn-warppers" id="user_btn" tabindex="1" style="display: none;">
+              <img class="leftPanel_butns_icon" src="pictures and icons/User Profile.svg" alt="">
+              <label class="left_panel_butns">User Profile</label>
+            </div>
+          </div>
+          <div class="left_panel_light"></div>
+        </div>
+        <!-- **************** Main Panel ****************** -->
+        <div class="main_panel">
+        <div class="main_panel_back">
+          <div class="main_workspace">
+            <div class="panel_title">TICKETS</div>
+            <!-- **************** Tickets Tablel ****************** -->
+            <div class="first_half_wrapper">
+              <div class="ticket_table_wrapper">
+                <section class="table_controller_bar">
+                  <label class="ticket_table_title">Tickets</label>
+                  <div class="quantity_selector_wrapper">
+                    <label class="show_label">Show</label>
+                    <select class="quantity_selector" size="1">
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                      <option value="08">08</option>
+                      <option value="10" selected>10</option>
+                    </select>
+                    <label class="per_page">/ Page</label>
+                  </div>               
+                  <input type="text" class="search_bar" placeholder="> Search" maxlength="30">
+                </section>
+                <section class="ticket_table_content">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Ticket #</th>
+                        <th>Ticket Title</th>
+                        <th>Project Name</th>
+                        <th>Assigned Developers</th>
+                        <th>Ticket Type</th>
+                        <th>Ticket Priority</th>
+                        <th>Ticket Status</th>
+                        <th>Created</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table>
+                  <div class="pagination_bar_wrapper">
+                    <!-- <button class="new_ticket_btn">+ New Ticket</button> -->
+                    <ul class="pagination_bar">
+                      <li class="previous_page"><a href="#" id="previous_page">&#60</a></li>
+                      <li class="page_numbers"><a href="#">01</a></li>
+                      <li class="page_numbers"><a href="#">02</a></li>
+                      <li class="page_numbers"><a href="#">03</a></li>
+                      <li class="next_page"><a href="#" id="next_page">&#62</a></li>
+                    </ul>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <!-- ************* Table's Edit Window ************** -->
+            <div class="edit_table_window">
+              <div class="table_window_header">
+                <label>Edit Ticket</label>
+              </div>
+              <div class="edit-create_window_content">
+                <div class="edit-create_table_line1">
+                  <div class="edit-create_table_line1_left">
+                    <label for="edit_ticket_title_input">Ticket Title*</label>
+                  </div>
+                  <div class="edit-create_table_line1_right">
+                    <input type="text" class="edit-create_ticket_title_input" id="edit_ticket_title_input" maxlength="30">
+                    <label class="ticket_id_label"></label>
+                    <label class="project_id_label"></label>
+                  </div>
+                </div>
+                <div class="edit-create_table_line2">
+                  <div class="edit-create_table_line2_left">
+                    <label>Ticket Status</label>
+                    <select class="quantity_selector" id="edit_ticket_status_selector" size="1">
+                      <!-- values are primary key of DB-->
+                      <option value="1">New</option>
+                      <option value="2">In Progress</option>
+                      <option value="3">Resolved</option>
+                    </select>
+                  </div>
+                  <div class="edit-create_table_line2_middle">
+                    <label>Ticket Type</label>
+                    <select class="quantity_selector" id="edit_ticket_type_selector" size="1">
+                      <!-- values are primary key of DB-->
+                      <option value="1">Bug</option>
+                      <option value="2">Feature Request</option>
+                      <option value="3">Revise</option>
+                    </select>
+                  </div>
+                  <div class="edit-create_table_line2_right">
+                    <label>Ticket Priority</label>
+                    <select class="quantity_selector" id="edit_ticket_priority_selector" size="1">
+                      <!-- values are primary key of DB-->
+                      <option value="1">Immediate</option>
+                      <option value="2">High</option>
+                      <option value="3">Medium</option>
+                      <option value="4">Low</option>
+                    </select>
+                  </div>
+                </div>
+                <label class="ticket_desc_label" for="edit_ticket_desc_textarea">Ticket Description*</label>
+                <div class="edit-create_table_line3">
+                  <textarea name="" class="edit-create_ticket_desc" id="edit_ticket_desc_textarea" cols="30" rows="10" maxlength="84"></textarea>
+                </div>
+                <div class="edit-create_table_line4">
+                  <label>Assign Users</label>
+                  <div class="members_wrapper">
+                    <ul id="edit_ticket_dev_selector" class="members_selector">
+                      <li><input type="checkbox"> Shabahang Saffari</li>
+                      <li><input type="checkbox"> Sean Anderson</li>
+                      <li><input type="checkbox"> James Smith</li>
+                      <li><input type="checkbox"> Robert Ramsey</li>
+                      <li><input type="checkbox"> Paul Hanson</li>
+                      <li><input type="checkbox"> Mike Dylon</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="edit-create_table_line5">
+                  <button class="cancel_btn" id="edit_ticket_cancel_btn">Cancel</button>
+                  <button class="save_btn" id="edit_ticket_save_btn">Update Ticket</button>
+                </div>
+              </div>
+            </div>
+            <!-- ************* Create New Ticket Window *************** -->
+            <div class="create_ticket_window">
+              <div class="table_window_header">
+                <label>New Ticket</label>
+              </div>
+              <div class="edit-create_window_content">
+                <div class="edit-create_table_line1">
+                  <div class="edit-create_table_line1_left">
+                    <label for="create_ticket_title_input">Ticket Title*</label>
+                  </div>
+                  <div class="edit-create_table_line1_right">
+                    <input type="text" class="edit-create_ticket_title_input" id="create_ticket_title_input" maxlength="30" placeholder="Your Ticket Name">
+                  </div>
+                </div>
+                <div class="edit-create_table_line2">
+                  <div class="edit-create_table_line2_left">
+                    <label>Ticket Status</label>
+                    <select class="quantity_selector" id="create_ticket_status_selector" size="1">
+                      <!-- values are primary key of DB-->
+                      <option value="1">New</option>
+                      <option value="2">In Progress</option>
+                      <option value="3">Resolved</option>
+                    </select>
+                  </div>
+                  <div class="edit-create_table_line2_middle">
+                    <label>Ticket Type</label>
+                    <select class="quantity_selector" id="create_ticket_type_selector" size="1">
+                      <!-- values are primary key of DB-->
+                      <option value="1">Bug</option>
+                      <option value="2">Feature Request</option>
+                      <option value="3">Revise</option>
+                    </select>
+                  </div>
+                  <div class="edit-create_table_line2_right">
+                    <label>Ticket Priority</label>
+                    <select class="quantity_selector" id="create_ticket_priority_selector" size="1">
+                      <!-- values are primary key of DB-->
+                      <option value="1">Immediate</option>
+                      <option value="2">High</option>
+                      <option value="3">Medium</option>
+                      <option value="4">Low</option>
+                    </select>
+                  </div>
+                </div>
+                <label class="ticket_desc_label" for="create_ticket_desc_textarea">Ticket Description*</label>
+                <div class="edit-create_table_line3">
+                  <textarea name="" class="edit-create_ticket_desc" id="create_ticket_desc_textarea" cols="30" rows="10" maxlength="84"></textarea>
+                </div>
+                <div class="edit-create_table_line4">
+                  <label>Assign Developers</label>
+                  <div class="members_wrapper">
+                    <ul id="create_ticket_dev_selector" class="members_selector">
+                      <li><input type="checkbox"> Shabahang Saffari</li>
+                      <li><input type="checkbox"> Sean Anderson</li>
+                      <li><input type="checkbox"> James Smith</li>
+                      <li><input type="checkbox"> Robert Ramsey</li>
+                      <li><input type="checkbox"> Paul Hanson</li>
+                      <li><input type="checkbox"> Mike Dylon</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="edit-create_table_line5">
+                  <button class="cancel_btn" id="create_ticket_cancel_btn">Cancel</button>
+                  <button class="save_btn" id="create_ticket_save_btn">Save Changes</button>
+                </div>
+            </div>
+          </div>
+
+
+          </div>
+          <!-- ************* Big back Blur Window *************** -->
+          <div class="back_blur_window"></div>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="top_left_panels.js"></script>
+    <script src="Tickets.js"></script>
+  </body>
+</html>

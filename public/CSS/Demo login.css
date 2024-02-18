@@ -1,0 +1,555 @@
+:root {
+  --window_inner_width: 1024;
+  --window_inner_height: 1440;
+}
+html{
+  font-size: 16px;
+}
+body{
+  margin: 0px;
+  background-color: rgb(36, 26, 61);
+  /* background-color: rgb(41, 23, 58); */
+}
+/* ************************************************************************************ */
+/* ************************************************************************************ */
+/* ********************************** Cellphone Design ******************************** */
+/* ************************************************************************************ */
+/* ************************************************************************************ */
+@media only screen and (width < 767px) and (orientation: portrait){
+  .background_gradient{
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: var(--window_inner_height);
+    width: var(--window_inner_width);
+    background: radial-gradient(circle at bottom right,rgba(24, 226, 230, 0.82) 4%, rgba(81,219,215,0.48) 23%,
+     rgba(81,219,215,0.2) 34%,rgba(19, 38, 95, 0.25) 43%, rgba(41, 29, 87, 0) 45%),
+
+                      radial-gradient(circle at top left,rgba(217,135,255,0.82) 9%, rgba(148,79,180,0.495) 35%,
+                       rgba(108,48,135,0.2) 48%, rgba(66, 31, 83, 0.25) 52%, rgba(82,16,112,0) 58%);    
+  }
+  .demo_login_pic{
+    display: none;
+  }
+  .wrapper{
+    height: var(--window_inner_height);
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+  }  
+  .logo_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo{
+    color: white;
+    font-size: 1.25rem;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 800;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    letter-spacing: 0.03rem;
+    text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.789);
+  }
+  .avatars_container1, .avatars_container2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .pmanager_pic, .admin_pic, .submitter_pic, .developer_pic{
+    padding: 4px 4px 4px 4px;
+    border-radius: 100px;
+  }
+  .top_left_avatar, .top_right_avatar{
+    margin-top: 3.43rem;
+  }
+  .bottom_left_avatar, .bottom_right_avatar{
+    margin-top: 2.5rem;
+  }
+  .top_right_avatar, .bottom_right_avatar{
+    margin-left: 2.18rem;
+  }
+  .pmanager_pic, .admin_pic, .submitter_pic, .developer_pic{
+    box-shadow: 0px 0px 50px #52c9d600;
+    background-color: rgba(27, 195, 195, 0);
+    transition: box-shadow 0.3s ease-in, background-color 0.75s;
+  }
+  .pmanager_label, .admin_label, .submitter_label, .developer_label{
+    display: block;
+    color: rgb(201, 201, 201);
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 0.31rem;
+    text-decoration: underline 2px rgba(255, 255, 255, 0);;
+    transition: text-decoration-color 0.7s, color 0.7s, text-decoration-underline;
+  }
+  .pmanager_label{
+    letter-spacing: -0.03rem;
+  }
+  /* have to check these hovers on an actual phone */
+  .top_left_avatar:hover .pmanager_label, .top_right_avatar:hover .admin_label,
+  .bottom_left_avatar:hover .submitter_label, .bottom_right_avatar:hover .developer_label{
+    color: rgb(255, 255, 255);
+    text-decoration-color: rgba(255, 255, 255, 0.73);
+    cursor: pointer;
+  }
+  .top_left_avatar:hover .pmanager_pic, .top_right_avatar:hover .admin_pic,
+  .bottom_left_avatar:hover .submitter_pic, .bottom_right_avatar:hover .developer_pic{
+    cursor: pointer;
+    box-shadow: 0px 0px 50px #52C8D6;
+    background-color: rgb(166, 255, 255);
+  }
+  .footnote_signin{
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 3.75rem;
+    color: rgb(232, 231, 231);
+  }
+  .sign_in_link{
+    display: inline-block;
+    color: rgb(232, 231, 231);
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    margin-left: 0.31rem;
+    text-decoration: underline 2px rgba(255, 255, 255, 0);;
+    transition: text-decoration-color 0.4s, color 0.4s, text-decoration-underline;
+  }
+  .sign_in_link:hover{
+    color: rgb(243, 243, 243);
+    text-decoration-color: rgba(243, 243, 243, 0.73);
+    cursor: pointer;
+  }
+
+}
+/* ************************************************************************************ */
+/* ************************************************************************************ */
+/* ******************************* Cellphone/Landscaoe ******************************** */
+/* ************************************************************************************ */
+/* ************************************************************************************ */
+@media only screen and (width< 900px) and (height< 700px) and (orientation: landscape){
+  
+  .background_gradient{
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    background: radial-gradient(circle at bottom right,rgba(24, 226, 230, 0.82) 4%, rgba(81,219,215,0.48) 23%,
+     rgba(81,219,215,0.2) 34%,rgba(19, 38, 95, 0.25) 43%, rgba(41, 29, 87, 0) 45%),
+
+                      radial-gradient(circle at top left,rgba(217,135,255,0.82) 9%, rgba(148,79,180,0.495) 35%,
+                       rgba(108,48,135,0.2) 48%, rgba(66, 31, 83, 0.25) 52%, rgba(82,16,112,0) 58%);    
+  }
+  .demo_login_pic{
+    display: none;
+  }
+  .wrapper{
+    height: var(--window_inner_height);
+    overflow-y: scroll;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+  }  
+  .logo_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.75rem;
+  }
+  .logo{
+    color: white;
+    font-size: 1.25rem;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 800;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    letter-spacing: 0.03rem;
+    text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.789);
+  }
+  .avatars_container1, .avatars_container2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .pmanager_pic, .admin_pic, .submitter_pic, .developer_pic{
+    padding: 4px 4px 4px 4px;
+    border-radius: 100px;
+  }
+  .top_left_avatar, .top_right_avatar{
+    margin-top: 1.25rem;
+  }
+  .bottom_left_avatar, .bottom_right_avatar{
+    margin-top: 0.3125rem;
+  }
+  .top_right_avatar, .bottom_right_avatar{
+    margin-left: 2.18rem;
+  }
+  .pmanager_pic, .admin_pic, .submitter_pic, .developer_pic{
+    box-shadow: 0px 0px 50px #52c9d600;
+    background-color: rgba(27, 195, 195, 0);
+    transition: box-shadow 0.3s ease-in, background-color 0.75s;
+  }
+  .pmanager_label, .admin_label, .submitter_label, .developer_label{
+    display: block;
+    color: rgb(201, 201, 201);
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 0.125rem;
+    text-decoration: underline 2px rgba(255, 255, 255, 0);;
+    transition: text-decoration-color 0.7s, color 0.7s, text-decoration-underline;
+  }
+  .pmanager_label{
+    letter-spacing: -0.03rem;
+  }
+  /* have to check these hovers on an actual phone */
+  .top_left_avatar:hover .pmanager_label, .top_right_avatar:hover .admin_label,
+  .bottom_left_avatar:hover .submitter_label, .bottom_right_avatar:hover .developer_label{
+    color: rgb(255, 255, 255);
+    text-decoration-color: rgba(255, 255, 255, 0.73);
+    cursor: pointer;
+  }
+  .top_left_avatar:hover .pmanager_pic, .top_right_avatar:hover .admin_pic,
+  .bottom_left_avatar:hover .submitter_pic, .bottom_right_avatar:hover .developer_pic{
+    cursor: pointer;
+    box-shadow: 0px 0px 50px #52C8D6;
+    background-color: rgb(166, 255, 255);
+  }
+  .footnote_signin{
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 1rem;
+    color: rgb(232, 231, 231);
+  }
+  .sign_in_link{
+    display: inline-block;
+    color: rgb(232, 231, 231);
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    margin-left: 0.3125rem;
+    text-decoration: underline 0.125rem rgba(255, 255, 255, 0);;
+    transition: text-decoration-color 0.4s, color 0.4s, text-decoration-underline;
+  }
+  .sign_in_link:hover{
+    color: rgb(243, 243, 243);
+    text-decoration-color: rgba(243, 243, 243, 0.73);
+    cursor: pointer;
+  }
+
+}
+
+
+
+/* ************************************************************************************ */
+/* ************************************************************************************ */
+/* ********************************** Tablet Design *********************************** */
+/* ************************************************************************************ */
+/* ************************************************************************************ */
+@media only screen and (730px<width< 1000px) and (height> 700px){
+  .background_gradient{
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    min-height: var(--window_inner_height);
+    width: var(--window_inner_width);
+    background: radial-gradient(circle at bottom right,rgba(24, 226, 230, 0.82) 4%, rgba(81,219,215,0.48) 15%, rgba(81,219,215,0.2) 25%,rgba(19, 38, 95, 0.25) 35%, rgba(41, 29, 87, 0) 36.5%),
+                      radial-gradient(circle at top left,rgba(217,135,255,0.82) 6%, rgba(148,79,180,0.495) 25.5%, rgba(108,48,135,0.2) 35%, rgba(66, 31, 83, 0.25) 39%, rgba(82,16,112,0) 47%);
+  }
+  .demo_login_pic{
+    display: none;
+  }
+  .wrapper{
+    height: var(--window_inner_height);
+    overflow-y: scroll;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+  } 
+  .logo_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo{
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    letter-spacing: 0.03rem;
+    text-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+  }
+  .form_content{
+    margin-top: 0.625rem;
+    height: 31.25rem;
+    width: 31.25rem;
+    border-radius: 15px;
+    background: linear-gradient(180deg, rgba(0, 246, 255, 0.4) 0%, rgba(18, 172, 177, 0.35) 25.15%, rgba(21, 67, 78, 0) 100%);
+  }
+  .avatars_container1, .avatars_container2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .pmanager_pic, .admin_pic, .submitter_pic, .developer_pic{
+    padding: 4px 4px 4px 4px;
+    border-radius: 100px;
+  }
+  .top_left_avatar, .top_right_avatar, .bottom_left_avatar, .bottom_right_avatar{
+    margin-top: 2.18rem;
+  }
+  .top_right_avatar, .bottom_right_avatar{
+    margin-left: 4.375rem;
+  }
+  .pmanager_pic, .admin_pic, .submitter_pic, .developer_pic{
+    box-shadow: 0px 0px 50px #52c9d600;
+    background-color: rgba(27, 195, 195, 0);
+    transition: box-shadow 0.3s ease-in, background-color 0.75s;
+  }
+  .pmanager_label, .admin_label, .submitter_label, .developer_label{
+    display: block;
+    color: rgb(201, 201, 201);
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 0.312rem;
+    text-decoration: underline 2px rgba(255, 255, 255, 0);;
+    transition: text-decoration-color 0.7s, color 0.7s, text-decoration-underline;
+  }
+  .pmanager_label{
+    letter-spacing: -0.03rem;
+  }
+  /* have to check these hovers on an actual tablet */
+  .top_left_avatar:hover .pmanager_label, .top_right_avatar:hover .admin_label,
+  .bottom_left_avatar:hover .submitter_label, .bottom_right_avatar:hover .developer_label{
+    color: rgb(255, 255, 255);
+    text-decoration-color: rgba(255, 255, 255, 0.73);
+    cursor: pointer;
+  }
+  .top_left_avatar:hover .pmanager_pic, .top_right_avatar:hover .admin_pic,
+  .bottom_left_avatar:hover .submitter_pic, .bottom_right_avatar:hover .developer_pic{
+    cursor: pointer;
+    box-shadow: 0px 0px 50px #52C8D6;
+    background-color: rgb(166, 255, 255);
+  }
+  .footnote_signin{
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 2.5rem;
+    color: rgb(202, 201, 201);
+  }
+  .sign_in_link{
+    display: inline-block;
+    color: rgb(202, 201, 201);
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    margin-left: 0.312rem;
+    text-decoration: underline 2px rgba(255, 255, 255, 0);;
+    transition: text-decoration-color 0.4s, color 0.4s, text-decoration-underline;
+  }
+  .sign_in_link:hover{
+    color: rgb(243, 243, 243);
+    text-decoration-color: rgba(243, 243, 243, 0.73);
+    cursor: pointer;
+  }
+
+}
+/* ************************************************************************************ */
+/* ************************************************************************************ */
+/* ********************************** Desktop Design ********************************** */
+/* ************************************************************************************ */
+/* ************************************************************************************ */
+@media only screen and (min-width: 900px){
+
+  .background_gradient{
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at right ,rgba(217,135,255,0.82) 6%, rgba(148,79,180,0.495) 33%, rgba(108,48,135,0.2) 50%, rgba(66, 31, 83, 0.25) 55%, rgba(82,16,112,0) 80%);
+  }
+  
+  .back{
+    height: var(--window_inner_height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: var(--window_inner_width);
+    height: var(--window_inner_height);
+    overflow: hidden;
+  }
+  .right_side{
+    margin-left: 8.625rem;
+    margin-right: 4.375rem;
+    height: 31.25rem;
+  }
+  .left_side{
+    margin-bottom: 3rem;
+    margin-right: 4.375rem;
+  }
+  
+  .logo_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo{
+    color: white;
+    font-size: 2.375rem;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    letter-spacing: 0.03rem;
+    text-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+  @-moz-document url-prefix(){
+    .logo{
+      letter-spacing: -0.06rem;
+    }
+  }
+  .form_content{
+    margin-top: 0.625rem;
+    margin-right: 0;
+    margin-left: 0;
+    height: 25.75rem;
+    width: 28.75rem;
+    border-radius: 15px;
+    background: linear-gradient(180deg, rgba(0, 246, 255, 0.4) 0%, rgba(18, 172, 177, 0.35) 25.15%, rgba(21, 67, 78, 0) 100%);
+  }
+  @-moz-document url-prefix(){
+    .form_content{
+      margin-top: 0.625rem;
+    }
+  }
+
+  .avatars_container1, .avatars_container2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+  }
+  .pmanager_pic, .admin_pic, .submitter_pic, .developer_pic{
+    padding: 4px 4px 4px 4px;
+    border-radius: 100px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+
+  .top_left_avatar, .top_right_avatar, .bottom_left_avatar, .bottom_right_avatar{
+    margin-top: 1.56rem;
+  }
+  .top_right_avatar, .bottom_right_avatar{
+    margin-left: 3.75rem;
+  }
+
+  .pmanager_pic, .admin_pic, .submitter_pic, .developer_pic{
+    box-shadow: 0px 0px 50px #52c9d600;
+    background-color: rgba(27, 195, 195, 0);
+    transition: box-shadow 0.3s ease-in, background-color 0.75s;
+    
+  }
+  .pmanager_label, .admin_label, .submitter_label, .developer_label{
+    display: block;
+    color: rgb(201, 201, 201);
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 0.3125rem;
+    text-decoration: underline 2px rgba(255, 255, 255, 0);;
+    transition: text-decoration-color 0.7s, color 0.7s, text-decoration-underline;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+  .pmanager_label{
+    letter-spacing: -0.03rem;
+  }
+  
+  .top_left_avatar:hover .pmanager_label, .top_right_avatar:hover .admin_label,
+  .bottom_left_avatar:hover .submitter_label, .bottom_right_avatar:hover .developer_label{
+    color: rgb(255, 255, 255);
+    text-decoration-color: rgba(255, 255, 255, 0.73);
+    cursor: pointer;
+  }
+  .top_left_avatar:hover .pmanager_pic, .top_right_avatar:hover .admin_pic,
+  .bottom_left_avatar:hover .submitter_pic, .bottom_right_avatar:hover .developer_pic{
+    cursor: pointer;
+    box-shadow: 0px 0px 50px #52C8D6;
+    background-color: rgb(166, 255, 255);
+  }
+  .footnote_signin{
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 2.5rem;
+    color: rgb(202, 201, 201);
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+  .sign_in_link{
+    display: inline-block;
+    color: rgb(202, 201, 201);
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    
+    margin-left: 0.3125rem;
+    text-decoration: underline 2px rgba(255, 255, 255, 0);;
+    transition: text-decoration-color 0.4s, color 0.4s, text-decoration-underline;
+  }
+  .sign_in_link:hover{
+    color: rgb(243, 243, 243);
+    text-decoration-color: rgba(243, 243, 243, 0.73);
+    cursor: pointer;
+  
+  }
+
+  .demo_login_pic{
+    
+    height: 500px;
+    margin-right: 0px;
+    margin-top: 0px;
+  }
+
+}
+
+

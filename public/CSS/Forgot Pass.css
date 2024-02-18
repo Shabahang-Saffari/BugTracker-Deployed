@@ -1,0 +1,1062 @@
+:root {
+  --window_inner_width: 1024;
+  --window_inner_height: 1440;
+}
+
+html {
+  font-size: 16px;
+}
+body {
+  margin: 0px;
+  background-color: rgb(36, 26, 61);
+  /* background-color: rgb(41, 23, 58); */
+}
+/* ************************************************************************************ */
+/* ************************************************************************************ */
+/* ********************************** Cellphone Design ******************************** */
+/* ************************************************************************************ */
+/* ************************************************************************************ */
+@media only screen and (width< 767px) and (orientation: portrait) {
+  .background_gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: var(--window_inner_height);
+    width: var(--window_inner_width);
+    background: radial-gradient(
+        circle at bottom right,
+        rgba(24, 226, 230, 0.82) 4%,
+        rgba(81, 219, 215, 0.48) 23%,
+        rgba(81, 219, 215, 0.2) 34%,
+        rgba(19, 38, 95, 0.25) 43%,
+        rgba(41, 29, 87, 0) 45%
+      ),
+      radial-gradient(
+        circle at top left,
+        rgba(217, 135, 255, 0.82) 9%,
+        rgba(148, 79, 180, 0.495) 35%,
+        rgba(108, 48, 135, 0.2) 48%,
+        rgba(66, 31, 83, 0.25) 52%,
+        rgba(82, 16, 112, 0) 58%
+      );
+  }
+  .team-meeting,
+  .designer_tag {
+    display: none;
+  }
+  .wrapper {
+    height: var(--window_inner_height);
+    overflow-y: scroll;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+  }
+  .left_side {
+    margin-top: 0;
+    text-align: center;
+    justify-content: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  .logo_and_shadow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  .logo {
+    display: block;
+    align-items: left;
+    margin-top: 0;
+    z-index: 50;
+    color: white;
+    font-size: 3.25rem;
+    font-family: "Darker Grotesque", sans-serif;
+    font-family: "Megrim", Arial, sans-serif;
+    font-weight: 950;
+    letter-spacing: 0.18rem;
+    text-decoration: underline 0.35rem;
+    text-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+  }
+  .logo_shadow {
+    position: absolute;
+    margin-left: 0.25rem;
+    color: rgba(30, 135, 156, 0.6);
+    font-size: 3.25rem;
+    font-family: "Darker Grotesque", sans-serif;
+    font-family: "Megrim", Arial, sans-serif;
+    font-weight: 950;
+    letter-spacing: 0.18rem;
+  }
+  .email_label {
+    visibility: hidden;
+    display: block;
+    text-align: left;
+    color: #fff;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    margin-top: 4%;
+    margin-left: 10%;
+    padding: 0;
+  }
+  .email_label.error {
+    visibility: visible;
+    color: #ff9486;
+  }
+  .email_textbox,
+  .password_textbox {
+    display: inline-block;
+    justify-content: center;
+    height: 3rem;
+    width: 89%;
+    border-radius: 5rem;
+    border: 0px;
+    background-color: #e2eef0;
+    outline: none;
+    box-shadow: inset 0px 2px 10px rgba(0, 0, 0, 0.375);
+    font-size: 1.5rem;
+    font-family: Arial, sans-serif;
+    color: rgb(96, 96, 96);
+    padding-left: 5%;
+    padding-right: 18%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .password_textbox {
+    margin-top: 10%;
+    font-size: 1.5rem;
+  }
+  .email_textbox::placeholder {
+    font-size: 1.25rem;
+    color: rgba(96, 96, 96, 0.5);
+    transform: translateY(2px);
+  }
+  .password_textbox::placeholder {
+    font-size: 1.25rem;
+    color: rgba(96, 96, 96, 0.5);
+    transform: translateY(2px);
+  }
+  .email_textbox.error,
+  .password_textbox.error {
+    border: 1px solid #e64645;
+  }
+  input.error::placeholder {
+    font-size: 1rem;
+    color: #e645458a;
+  }
+  input.error:hover::placeholder {
+    text-decoration: underline;
+    text-decoration-color: #e64545;
+  }
+  .password_container {
+    position: relative;
+  }
+  #show_pass,
+  #no_show_pass {
+    position: absolute;
+    bottom: 10%;
+    right: 8%;
+    color: rgb(125, 126, 126);
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  #no_show_pass {
+    display: none;
+  }
+  .sign_in_label {
+    display: block;
+    color: rgb(159, 159, 159);
+    font-family: Arial, sans-serif;
+    margin-top: 10%;
+    letter-spacing: 0.15rem;
+    text-decoration: underline rgba(255, 255, 255, 0);
+    transition: text-decoration-color 0.4s, color 0.4s,
+      text-decoration-underline;
+  }
+  .sign_in_label:hover {
+    color: rgb(243, 243, 243);
+    text-decoration-color: rgba(243, 243, 243, 0.73);
+    cursor: pointer;
+  }
+  .reset_pass_button {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 10%;
+    height: 3rem;
+    width: 89%;
+    background: linear-gradient(
+      90deg,
+      #722aa9 6.25%,
+      #786fa9 44.92%,
+      #52c8d7 86.23%
+    );
+    border-radius: 5rem;
+    border: 0px;
+  }
+  .reset_pass_button:active,
+  .Demo_button:active,
+  .SignUp_button:active {
+    opacity: 0.9;
+  }
+  .Demo_button {
+    display: inline-block;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 10%;
+    height: 3rem;
+    width: 43%;
+    background: linear-gradient(
+      90deg,
+      #722aa9 6.25%,
+      #78589d 59.86%,
+      #9095ba 90.62%
+    );
+    border-radius: 5rem;
+    border: 0px;
+  }
+  .form_content .footnote {
+    margin-top: 10%;
+    color: rgb(225, 225, 225);
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    text-align: justify;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 1.562rem;
+    margin-right: 1.562rem;
+  }
+  .SignUp_button {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 10%;
+    margin-left: 1.5%;
+    height: 3rem;
+    width: 43%;
+    background: linear-gradient(
+      90deg,
+      #9095ba 6.25%,
+      #6696ac 48.18%,
+      #52c8d6 90.62%
+    );
+    border-radius: 5rem;
+    border: 0px;
+  }
+}
+/* ************************************************************************************ */
+/* ************************************************************************************ */
+/* ******************************* Cellphone/Landscaoe ******************************** */
+/* ************************************************************************************ */
+/* ************************************************************************************ */
+@media only screen and (width< 900px) and (height< 600px) and (orientation: landscape) {
+  .background_gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: var(--window_inner_height);
+    width: var(--window_inner_width);
+    background: radial-gradient(
+        circle at bottom right,
+        rgba(24, 226, 230, 0.82) 4%,
+        rgba(81, 219, 215, 0.48) 23%,
+        rgba(81, 219, 215, 0.2) 34%,
+        rgba(19, 38, 95, 0.25) 43%,
+        rgba(41, 29, 87, 0) 45%
+      ),
+      radial-gradient(
+        circle at top left,
+        rgba(217, 135, 255, 0.82) 9%,
+        rgba(148, 79, 180, 0.495) 35%,
+        rgba(108, 48, 135, 0.2) 48%,
+        rgba(66, 31, 83, 0.25) 52%,
+        rgba(82, 16, 112, 0) 58%
+      );
+  }
+  .team-meeting,
+  .designer_tag {
+    display: none;
+  }
+  .wrapper {
+    height: var(--window_inner_height);
+    overflow-y: scroll;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+  }
+  .left_side {
+    width: 65%;
+    text-align: center;
+    justify-content: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  .logo_and_shadow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  .logo {
+    display: block;
+    margin-top: 0;
+    z-index: 50;
+    color: white;
+    font-size: 4rem;
+    font-family: "Darker Grotesque", sans-serif;
+    font-family: "Megrim", Arial, sans-serif;
+    font-weight: 850;
+    letter-spacing: 0.2rem;
+    text-decoration: underline 0.35rem;
+    text-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+  }
+  .logo_shadow {
+    position: absolute;
+    color: rgba(30, 135, 156, 0.6);
+    font-size: 4rem;
+    margin-left: 1.5%;
+    font-family: "Darker Grotesque", sans-serif;
+    font-family: "Megrim", Arial, sans-serif;
+    font-weight: 850;
+    letter-spacing: 0.2rem;
+  }
+  .email_label {
+    visibility: hidden;
+    display: block;
+    text-align: left;
+    color: #fff;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    margin-top: 4%;
+    margin-left: 18%;
+    padding: 0;
+  }
+  .email_label.error {
+    visibility: visible;
+    color: #ff9486;
+  }
+  .password_container {
+    position: relative;
+  }
+  .email_textbox,
+  .password_textbox {
+    display: inline-block;
+    height: 3rem;
+    width: 100%;
+    border-radius: 5rem;
+    border: 0px;
+    background-color: #e2eef0;
+    outline: none;
+    box-shadow: inset 0px 2px 10px rgba(0, 0, 0, 0.375);
+    font-size: 1.5rem;
+    font-family: Arial, sans-serif;
+    color: rgb(96, 96, 96);
+    padding-left: 2.5%;
+    padding-right: 12%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .password_textbox {
+    margin-top: 3%;
+    height: 3rem;
+  }
+  .email_textbox::placeholder {
+    font-size: 1.25rem;
+    transform: translateY(0px);
+    color: rgba(96, 96, 96, 0.5);
+  }
+  .password_textbox::placeholder {
+    font-size: 1.25rem;
+    transform: translateY(0px);
+    color: rgba(96, 96, 96, 0.5);
+  }
+  .email_textbox.error,
+  .password_textbox.error {
+    border: 1px solid #e64645;
+  }
+  input.error::placeholder {
+    font-size: 1rem;
+    color: #e645458a;
+    transform: translateY(-3px);
+  }
+  input.error:hover::placeholder {
+    text-decoration: underline;
+    text-decoration-color: #e64545;
+  }
+  #show_pass,
+  #no_show_pass {
+    position: absolute;
+    top: 45%;
+    right: 4%;
+    color: rgb(125, 126, 126);
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+  #no_show_pass {
+    display: none;
+  }
+  .sign_in_label {
+    display: block;
+    color: rgb(159, 159, 159);
+    font-size: 1.15rem;
+    font-family: Arial, sans-serif;
+    text-align: right;
+    margin-top: 2%;
+    text-decoration: underline rgba(255, 255, 255, 0);
+    transition: text-decoration-color 0.4s, color 0.4s,
+      text-decoration-underline;
+  }
+  .sign_in_label:hover {
+    color: rgb(243, 243, 243);
+    text-decoration-color: rgba(243, 243, 243, 0.73);
+    cursor: pointer;
+  }
+  .reset_pass_button {
+    display: block;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    height: 3rem;
+    width: 100%;
+    background: linear-gradient(
+      90deg,
+      #722aa9 6.25%,
+      #786fa9 44.92%,
+      #52c8d7 86.23%
+    );
+    border-radius: 5rem;
+    border: 0px;
+  }
+  .reset_pass_button:active,
+  .Demo_button:active,
+  .SignUp_button:active {
+    opacity: 0.9;
+  }
+  .Demo_button {
+    display: inline-block;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 3%;
+    height: 3rem;
+    width: 45%;
+    background: linear-gradient(
+      90deg,
+      #722aa9 6.25%,
+      #78589d 59.86%,
+      #9095ba 90.62%
+    );
+    border-radius: 5rem;
+    border: 0px;
+  }
+  .form_content .footnote {
+    margin-top: 3%;
+    color: rgb(225, 225, 225);
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    text-align: justify;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .SignUp_button {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 3%;
+    margin-left: 8%;
+    height: 3rem;
+    width: 45%;
+    background: linear-gradient(
+      90deg,
+      #9095ba 6.25%,
+      #6696ac 48.18%,
+      #52c8d6 90.62%
+    );
+    border-radius: 5rem;
+    border: 0px;
+  }
+}
+
+/* ************************************************************************************ */
+/* ************************************************************************************ */
+/* ********************************** Tablet Design *********************************** */
+/* ************************************************************************************ */
+/* ************************************************************************************ */
+@media only screen and (767px<width< 1000px) and (height> 600px) {
+  .background_gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    min-height: var(--window_inner_height);
+    width: var(--window_inner_width);
+    background: radial-gradient(
+        circle at bottom right,
+        rgba(24, 226, 230, 0.82) 4%,
+        rgba(81, 219, 215, 0.48) 15%,
+        rgba(81, 219, 215, 0.2) 25%,
+        rgba(19, 38, 95, 0.25) 35%,
+        rgba(41, 29, 87, 0) 36.5%
+      ),
+      radial-gradient(
+        circle at top left,
+        rgba(217, 135, 255, 0.82) 6%,
+        rgba(148, 79, 180, 0.495) 25.5%,
+        rgba(108, 48, 135, 0.2) 35%,
+        rgba(66, 31, 83, 0.25) 39%,
+        rgba(82, 16, 112, 0) 47%
+      );
+  }
+  .team-meeting,
+  .designer_tag {
+    display: none;
+  }
+  .wrapper {
+    height: var(--window_inner_height);
+    overflow-y: scroll;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+  }
+  .left_side {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .logo_and_shadow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  .logo {
+    z-index: 50;
+    color: white;
+    font-size: 5.25rem;
+    text-decoration: none;
+    font-family: "Darker Grotesque", sans-serif;
+    font-family: "Megrim", Arial, sans-serif;
+    font-weight: 850;
+    line-height: 5.7rem;
+    letter-spacing: 0.05rem;
+    text-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+  }
+  .logo_shadow {
+    position: absolute;
+    margin-left: 2.5%;
+    color: rgba(30, 135, 156, 0.6);
+    font-size: 5.25rem;
+    font-family: "Darker Grotesque", sans-serif;
+    font-family: "Megrim", Arial, sans-serif;
+    font-weight: 850;
+    line-height: 5.7rem;
+    letter-spacing: 0.01em;
+  }
+  .form_content {
+    margin-top: -3%;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 246, 255, 0.4) 0%,
+      rgba(18, 172, 177, 0.35) 25.15%,
+      rgba(21, 67, 78, 0) 100%
+    );
+  }
+  .email_label {
+    visibility: hidden;
+    display: inline-block;
+    color: #fff;
+    font-size: 0.875rem;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    margin-top: 2.5rem;
+    margin-left: 1.875rem;
+    padding: 0;
+  }
+  .email_label.error {
+    visibility: visible;
+    color: #ff9486;
+  }
+  .password_container {
+    position: relative;
+  }
+  .email_textbox,
+  .password_textbox {
+    display: inline-block;
+    height: 2.5rem;
+    width: 29.375rem;
+    border-radius: 5rem;
+    border: 0px;
+    background-color: #e2eef0;
+    outline: none;
+    box-shadow: inset 0px 2px 10px rgba(0, 0, 0, 0.375);
+    font-size: 1.125rem;
+    font-family: Arial, sans-serif;
+    color: rgb(96, 96, 96);
+    padding-left: 0.937rem;
+    padding-right: 0.937rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: 0.937rem;
+  }
+  .password_textbox {
+    background-color: #8d7f92;
+    margin-top: 2.187rem;
+    font-size: 1.125rem;
+  }
+  .email_textbox::placeholder {
+    color: rgba(96, 96, 96, 0.5);
+  }
+  .password_textbox::placeholder {
+    font-size: 1.125rem;
+    color: rgba(96, 96, 96, 0.5);
+  }
+  .email_textbox.error,
+  .password_textbox.error {
+    border: 1.5px solid #e64645;
+  }
+  input.error::placeholder {
+    font-size: 0.875rem;
+    color: #e645458a;
+  }
+  input.error:hover::placeholder {
+    text-decoration: underline;
+    text-decoration-color: #e64545;
+  }
+  #show_pass,
+  #no_show_pass {
+    position: absolute;
+    top: 44px;
+    left: 450px;
+    color: rgb(125, 126, 126);
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+  #no_show_pass {
+    display: none;
+  }
+
+  .sign_in_label {
+    display: block;
+    color: rgb(159, 159, 159);
+    font-size: 0.875rem;
+    font-family: Arial, sans-serif;
+    margin-left: 1.0rem;
+    margin-top: 2.187rem;
+    text-align: left;
+    text-decoration: underline rgba(255, 255, 255, 0);
+    transition: text-decoration-color 0.4s, color 0.4s,
+      text-decoration-underline;
+  }
+  .sign_in_label:hover {
+    color: rgb(243, 243, 243);
+    text-decoration-color: rgba(243, 243, 243, 0.73);
+    cursor: pointer;
+  }
+  .reset_pass_button {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 2.187rem;
+    margin-left: 0.937rem;
+    height: 2.5rem;
+    width: 29.375rem;
+    background: linear-gradient(
+      90deg,
+      #722aa9 6.25%,
+      #786fa9 44.92%,
+      #52c8d7 86.23%
+    );
+    border-radius: 35rem;
+    border: 0px;
+  }
+  .reset_pass_button:active,
+  .Demo_button:active,
+  .SignUp_button:active {
+    opacity: 0.9;
+  }
+  .Demo_button {
+    display: inline-block;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 2.187rem;
+    margin-left: 0.937rem;
+    height: 2.5rem;
+    width: 14rem;
+    background: linear-gradient(
+      90deg,
+      #722aa9 6.25%,
+      #78589d 59.86%,
+      #9095ba 90.62%
+    );
+    border-radius: 35rem;
+    border: 0px;
+  }
+  .form_content .footnote {
+    display: block;
+    width: 29.375rem;
+    color: rgb(159, 159, 159);
+    font-size: 0.812rem;
+    font-family: Arial, sans-serif;
+    margin-left: 0.937rem;
+    margin-top: 2.187rem;
+  }
+  .SignUp_button {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 2.187rem;
+    margin-left: 1rem;
+    margin-right: 0.937rem;
+    height: 2.5rem;
+    width: 14rem;
+    background: linear-gradient(
+      90deg,
+      #9095ba 6.25%,
+      #6696ac 48.18%,
+      #52c8d6 90.62%
+    );
+    border-radius: 35rem;
+    border: 0px;
+  }
+}
+/* ************************************************************************************ */
+/* ************************************************************************************ */
+/* ********************************** Desktop Design ********************************** */
+/* ************************************************************************************ */
+/* ************************************************************************************ */
+@media only screen and (min-width: 900px) {
+  .background_gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle at bottom right,
+        rgba(24, 226, 230, 0.82) 4%,
+        rgba(81, 219, 215, 0.48) 15%,
+        rgba(81, 219, 215, 0.2) 25%,
+        rgba(19, 38, 95, 0.25) 35%,
+        rgba(41, 29, 87, 0) 36.5%
+      ),
+      radial-gradient(
+        circle at top left,
+        rgba(217, 135, 255, 0.82) 6%,
+        rgba(148, 79, 180, 0.495) 25.5%,
+        rgba(108, 48, 135, 0.2) 35%,
+        rgba(66, 31, 83, 0.25) 39%,
+        rgba(82, 16, 112, 0) 47%
+      );
+  }
+
+  .designer_tag {
+    height: 2rem;
+    width: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding-top: 2.5rem;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 0.625rem;
+    letter-spacing: 0.2rem;
+    transform: rotate(90deg);
+    background: #722aa9;
+    border-radius: 0 0 0.8rem 0.8rem;
+    position: fixed;
+    top: 45%;
+    right: -3.6rem;
+    transition: box-shadow 0.2s ease-in;
+  }
+  .designer_tag:hover {
+    box-shadow: 0px 0px 22px #a64dea;
+    cursor: pointer;
+  }
+  .back {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 15.75rem;
+  }
+  .left_side {
+    height: 34.37rem;
+    width: 28.75rem;
+  }
+  .logo_and_shadow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo {
+    position: absolute;
+    z-index: 50;
+    color: white;
+    font-size: 5rem;
+    font-family: "Darker Grotesque", sans-serif;
+    font-family: "Megrim", Arial, sans-serif;
+    font-weight: 850;
+    line-height: 5.62rem;
+    letter-spacing: 0.03rem;
+    text-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+  @-moz-document url-prefix() {
+    .logo {
+      letter-spacing: -0.06rem;
+    }
+  }
+  .logo_shadow {
+    position: relative;
+    left: -5px;
+    color: rgba(30, 135, 156, 0.6);
+    font-size: 5rem;
+    font-family: "Darker Grotesque", sans-serif;
+    font-family: "Megrim", Arial, sans-serif;
+    font-weight: 850;
+    line-height: 5.625rem;
+    letter-spacing: 0.03rem;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+  @-moz-document url-prefix() {
+    .logo_shadow {
+      letter-spacing: -0.06rem;
+    }
+  }
+  .form_content {
+    margin-top: -1rem;
+    margin-right: 0;
+    margin-left: 0;
+    height: 25.75rem;
+    width: 28.75rem;
+    border-radius: 15px;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 246, 255, 0.4) 0%,
+      rgba(18, 172, 177, 0.35) 25.15%,
+      rgba(21, 67, 78, 0) 100%
+    );
+  }
+  @-moz-document url-prefix() {
+    .form_content {
+      margin-top: -1.093rem;
+    }
+  }
+  .email_label {
+    visibility: hidden;
+    display: inline-block;
+    color: #fff;
+    font-size: 0.875rem;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    margin-top: 2.5rem;
+    margin-left: 2.625rem;
+    padding: 0;
+  }
+  .email_label.error {
+    visibility: visible;
+    color: #ff9486;
+  }
+  .email_textbox,
+  .password_textbox {
+    display: inline-block;
+    margin-left: 1.56rem;
+    margin-right: 1.56rem;
+    height: 2.25rem;
+    width: 25.68rem;
+    border-radius: 35px;
+    border: 0px;
+    background-color: #e2eef0;
+    outline: none;
+    box-shadow: inset 0px 2px 10px rgba(0, 0, 0, 0.375);
+    font-size: 1.125rem;
+    font-family: Arial, sans-serif;
+    color: rgb(96, 96, 96);
+    padding-left: 1.25rem;
+    padding-right: 3.125rem;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box;
+  }
+  .password_container {
+    position: relative;
+  }
+  .password_textbox {
+    background-color: #8d7f92;
+    margin-top: 1.562rem;
+    font-size: 1.125rem;
+  }
+  .email_textbox::placeholder {
+    color: rgba(96, 96, 96, 0.5);
+  }
+  .password_textbox::placeholder {
+    font-size: 1.125rem;
+    color: rgba(96, 96, 96, 0.5);
+  }
+  .email_textbox.error,
+  .password_textbox.error {
+    border: 1.5px solid #e64645;
+  }
+  input.error::placeholder {
+    font-size: 0.875rem;
+    color: #e645458a;
+  }
+  .email_textbox:hover::placeholder {
+    text-decoration: underline;
+    text-decoration-color: rgba(125, 126, 126, 0.5);
+  }
+  input.error:hover::placeholder {
+    text-decoration: underline;
+    text-decoration-color: #e6454566;
+  }
+  .password_textbox:hover::placeholder {
+    text-decoration: underline;
+    text-decoration-color: rgba(125, 126, 126, 0.5);
+  }
+
+  .sign_in_label {
+    display: inline-block;
+    color: rgb(159, 159, 159);
+    font-size: 0.875rem;
+    font-family: Arial, sans-serif;
+    margin-left: 24.5rem;
+    margin-top: 1.25rem;
+    text-decoration: underline rgba(255, 255, 255, 0);
+    transition: text-decoration-color 0.4s, color 0.4s,
+      text-decoration-underline;
+  }
+  .sign_in_label:hover {
+    color: rgb(243, 243, 243);
+    text-decoration-color: rgba(243, 243, 243, 0.73);
+    cursor: pointer;
+  }
+  .reset_pass_button {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 1.25rem;
+    margin-left: 1.562rem;
+    margin-right: 1.562rem;
+    height: 2.25rem;
+    width: 25.687rem;
+    background: linear-gradient(
+      90deg,
+      #722aa9 6.25%,
+      #786fa9 44.92%,
+      #52c8d7 86.23%
+    );
+    border-radius: 35px;
+    border: 0px;
+    transition: box-shadow 0.2s ease-in;
+  }
+  .reset_pass_button:hover,
+  .Demo_button:hover,
+  .SignUp_button:hover {
+    box-shadow: 0px 0px 20px rgba(0, 242, 255, 0.529);
+    cursor: pointer;
+  }
+  /* .SignIn_button:active, .Demo_button:active, .SignUp_button:active{
+    opacity: 0.9;
+  } */
+
+  .Demo_button {
+    display: inline-block;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1.562rem;
+    margin-left: 1.562rem;
+    height: 36px;
+    width: 200px;
+    background: linear-gradient(
+      90deg,
+      #722aa9 6.25%,
+      #78589d 59.86%,
+      #9095ba 90.62%
+    );
+    border-radius: 35px;
+    border: 0px;
+    transition: box-shadow 0.2s ease-in;
+  }
+  .form_content .footnote {
+    margin-top: 1.562rem;
+    color: rgb(159, 159, 159);
+    font-size: 0.812rem;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 1.562rem;
+    margin-right: 1.562rem;
+  }
+
+  .SignUp_button {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1.562rem;
+    margin-left: 0.437rem;
+    height: 2.25rem;
+    width: 12.5rem;
+    background: linear-gradient(
+      90deg,
+      #9095ba 6.25%,
+      #6696ac 48.18%,
+      #52c8d6 90.62%
+    );
+    border-radius: 35px;
+    border: 0px;
+    transition: box-shadow 0.2s ease-in;
+  }
+  .team-meeting {
+    margin-top: 1.25rem;
+    height: 28.75rem;
+  }
+}
