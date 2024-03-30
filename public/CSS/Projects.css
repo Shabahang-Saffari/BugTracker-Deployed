@@ -2010,6 +2010,8 @@ body{
     display: block;
     height: 70vh;
     width: 95%;
+    max-width: 2500px;
+    
     background-color: #722aa9;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.1);
