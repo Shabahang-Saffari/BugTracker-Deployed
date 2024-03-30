@@ -1738,6 +1738,8 @@ body{
     display: flex;
     flex-direction: row;
     width: 95%;
+    max-width: 2500px;
+    
     height: 45vh;
     margin-top: 4vh;
   }
