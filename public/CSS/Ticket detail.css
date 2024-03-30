@@ -2091,6 +2091,8 @@ body{
     display: block;
     height: 20vh;
     width: 95%;
+    max-width: 2500px;
+
     background-color: #722AA9;
     border-radius: 20px;
     background:rgba(255, 255, 255, 0.1);
@@ -2180,6 +2182,8 @@ body{
     display: flex;
     flex-direction: row;
     width: 95%;
+    max-width: 2500px;
+    
     height: 45vh;
     margin-top: 4vh;
   }
