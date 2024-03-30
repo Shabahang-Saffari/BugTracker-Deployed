@@ -1916,6 +1916,8 @@ body{
     display: block;
     height: 15.625rem;
     width: 95%;
+    max-width: 2500px;
+
     background-color: #722AA9;
     border-radius: 20px;
     background:rgba(255, 255, 255, 0.1);
@@ -2100,6 +2102,7 @@ body{
   .cards{
     margin-top: 2.4%;
     width: 95%;
+    max-width: 2500px;
   }
   .cards_wrapper{
     display: flex;
@@ -2108,6 +2111,7 @@ body{
     align-items: center;
     height: 100%;
     width: 100%;
+    
   }
   .card1, .card2, .card3{
     height: 12.5rem;
