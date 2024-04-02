@@ -238,7 +238,7 @@ let edit_ticket_devs_checkbox = document.querySelectorAll("#edit_ticket_dev_sele
 
 // ************* AddEvent Listener *************
 table_body.addEventListener("click", async(e) => {
-  debugger;
+  
   if (e.target.classList.contains("my_edit")) {
     const selected_row_index = e.target.parentElement.parentElement.rowIndex;
     const table_tr = table_body.getElementsByTagName("tr");
@@ -442,7 +442,7 @@ edit_ticket_cancel_btn.addEventListener("click", ()=>{
 // // *************** Tabel Delete Button  ******************
 // // *******************************************************
 table_body.addEventListener("click", async(e) => {
-  debugger;
+  
   if (e.target.classList.contains("my_delete")) {
     const selected_row_index = e.target.parentElement.parentElement.rowIndex;
     const table_tr = table_body.getElementsByTagName("tr");
@@ -483,7 +483,7 @@ table_body.addEventListener("click", async(e) => {
 // ************************************************************
 
 table_body.addEventListener("click", (e)=>{
-  debugger;
+  
   if (e.target.cellIndex === 0 || e.target.cellIndex === 1 || e.target.cellIndex === 8){
     
     const selected_row_index = e.target.parentElement.rowIndex;

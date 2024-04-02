@@ -2418,13 +2418,13 @@ body{
   .members_wrapper{
     margin-top: 0.625rem;
     width: 100%;
-    height: 14vh;
+    height: 8rem;
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
   }
   .members_selector{
-    height: 90%;
+    height: 100%;
     overflow-y: scroll;
     margin-left: 0.625rem;
     list-style-type: none;
