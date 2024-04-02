@@ -2488,7 +2488,7 @@ body{
   }
   .edit-create_table_line1 textarea{
     display: inline-block;
-    height: 12vh;
+    height: 8rem;
     width: 100%;
     padding-top: 0.625rem;
     padding-left: 0.625rem;
