@@ -88,7 +88,6 @@ async function dispaly_users_table(search_box_input){
         localStorage.removeItem("user_token");
       } 
       window.alert(error.response.data.msg);
-      // console.log(error);
     }
   }
 
