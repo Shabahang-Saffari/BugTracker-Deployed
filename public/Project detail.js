@@ -44,7 +44,7 @@ async function dispaly_project_info(){
       localStorage.removeItem("user_token");
     } 
     window.alert(error.response.data.msg);
-    // console.log(error);
+    
   }
 }
 dispaly_project_info();
