@@ -95,7 +95,7 @@ async function dispaly_ticket_table(number_of_rows, search_box_input) {
     catch (error) {
       if (error.response.status === 401) localStorage.removeItem("user_token");
       window.alert(error.response.data.msg);
-      // console.log(error);
+      
     }
 
     var tickets_info = prj_all_tickets[0];
