@@ -370,7 +370,7 @@ create_ticket_create_btn.addEventListener("click", async()=>{
         localStorage.removeItem("user_token");
       } 
       window.alert(error.response.data.msg);
-      // console.log(error);
+      
     }
 
     // *** reseting scroll bar position ***
