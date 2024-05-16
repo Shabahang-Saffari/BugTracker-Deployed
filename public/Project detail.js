@@ -363,7 +363,7 @@ create_ticket_create_btn.addEventListener("click", async()=>{
           await axios.post(`/api/v1/notifications/new_notification/`,{user_id, notification_desc, notification_date }, {headers: { Authorization: `Bearer ${user_token}`}});
         }
       }
-      // ****** HERE I have to add the code to refresh the Notification of the top page *******
+      // ****** code for refreshing the notification box can be here *******
     } 
     catch (error) {
       if (error.response.status === 401){
